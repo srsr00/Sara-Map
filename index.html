@@ -20,75 +20,282 @@ var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니
  
 // 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다 
 var positions = [
-    {"title":"행복 안심 \n무인택배함","lat":37.4396040,"lng":127.1654281},
-{"title":"행복 안심 \n무인택배함","lat":37.4282220,"lng":127.1463438},
-{"title":"버드내 도서관","lat":37.2567638,"lng":127.0149433},
-{"title":"여성안심 무인택배 보관함(수지도서관)","lat":37.3197920,"lng":127.0941287},
-{"title":"병점역안심무인택배함","lat":37.2070505387,"lng":127.0330044357},
-{"title":"화산동안심무인택배함","lat":37.2059365037,"lng":127.0145635541},
-{"title":"봉담읍안심무인택배함","lat":37.2199093515,"lng":126.9499615682},
-{"title":"향남읍안심무인택배함","lat":37.1321128653,"lng":126.9203802060},
-{"title":"무인택배함","lat":37.4330750,"lng":126.9933910},
-{"title":"여성안심 무인택배 보관함(죽전2동)","lat":37.3259005,"lng":127.1055992},
-{"title":"행복 안심 \n무인택배함","lat":37.4521301,"lng":127.1500173},
-{"title":"지동 행정복지센터","lat":37.2818733,"lng":127.0284786},
-{"title":"파장동 행정복지센터","lat":37.3101771,"lng":126.9973658},
-{"title":"진안동안심무인택배함","lat":37.2132762058,"lng":127.0349221071},
-{"title":"동탄4동안심무인택배함","lat":37.1997235077,"lng":127.1122427158},
-{"title":"광명국민체육센터 택배함","lat":37.4868017616,"lng":126.8656773005},
-{"title":"광명여성비전센터 택배함","lat":37.4347890253,"lng":126.8801441546},
-{"title":"광명안현경로당 택배함","lat":37.4601038150,"lng":126.8724724337},
-{"title":"광명종합사회복지관 택배함","lat":37.4809053962,"lng":126.8504693907},
-{"title":"광명전통시장공영주차장 택배함","lat":37.4823423350,"lng":126.8561009588},
-{"title":"여성안심택배보관함(가능1동 주민센터 후문주차장)","lat":37.7504849,"lng":127.0384882},
-{"title":"여성안심택배보관함(경전철 동오역사내)","lat":37.7450094,"lng":127.0563441},
-{"title":"여성안심택배보관함(경전철 송산역사내)","lat":37.7347378,"lng":127.0881237},
-{"title":"고양여성안심무인택배","lat":37.6370527,"lng":126.8322364},
-{"title":"고양여성안심무인택배","lat":37.6508813,"lng":126.8737239},
-{"title":"고양여성안심무인택배","lat":37.6704886,"lng":126.7606839},
-{"title":"여성안심 무인택배 보관함(명지대역)","lat":37.2379917,"lng":127.1903507},
-{"title":"여성안심 무인택배 보관함(청덕도서관)","lat":37.2927081,"lng":127.1475184},
-{"title":"여성안심\n무인택배함","lat":37.3901398,"lng":126.9504180},
-{"title":"여성안심무인택배보관함","lat":37.6008656,"lng":127.1423149},
-{"title":"조원1동 행정복지센터","lat":37.3017609,"lng":127.0164732},
-{"title":"평동 주민센터","lat":37.2580705,"lng":126.9941119},
-{"title":"곡선동 주민센터","lat":37.2430198,"lng":127.0331652},
-{"title":"팔달구민생활체육센터","lat":37.2689008,"lng":127.0131752},
-{"title":"화서1동 주민센터","lat":37.2764876,"lng":126.9948990},
-{"title":"매탄2동 행정복지센터","lat":37.2701813,"lng":127.0474156},
-{"title":"여성안심\n무인택배함","lat":37.2939227,"lng":126.8722390},
-{"title":"여성안심\n무인택배함","lat":37.3405013,"lng":126.8272108},
-{"title":"여성안심\n무인택배함","lat":37.3384170,"lng":126.8026945},
-{"title":"의왕안심택배보관함","lat":37.3204274,"lng":126.9485599},
-{"title":"의왕안심택배보관함","lat":37.3534760,"lng":126.9715047},
-{"title":"의왕안심택배보관함","lat":37.3874735,"lng":126.9815854},
-{"title":"의왕안심택배보관함","lat":37.3912234,"lng":126.9949998},
-{"title":"의왕안심택배보관함","lat":37.3457286,"lng":126.9768911},
-{"title":"행복 안심 \n무인택배함","lat":37.4548281,"lng":127.1609064},
-{"title":"행복 안심 \n무인택배함","lat":37.4461653,"lng":127.1639845},
-{"title":"행복 안심 \n무인택배함","lat":37.4405796,"lng":127.1261294},
-{"title":"행복 안심 \n무인택배함","lat":37.4331364,"lng":127.1643182},
-{"title":"행복 안심 \n무인택배함","lat":37.4384661,"lng":127.1389848},
-{"title":"행복 안심 \n무인택배함","lat":37.4561358,"lng":127.1599032},
-{"title":"행복 안심 \n무인택배함","lat":37.4371621,"lng":127.1287113},
-{"title":"율천동 행정복지센터","lat":37.2974596,"lng":126.9713137},
-{"title":"여성안심택배보관함(경전철 회룡역사내)","lat":37.7159306,"lng":127.0463200},
-{"title":"고양여성안심무인택배","lat":37.6431641,"lng":126.7896540},
-{"title":"고양여성안심무인택배","lat":37.6530474,"lng":126.8954435},
-{"title":"고양여성안심무인택배","lat":37.6588831,"lng":126.7736864},
-{"title":"고양여성안심무인택배","lat":37.6423587,"lng":126.7926815},
-{"title":"여성안심 무인택배 보관함(기흥구청)","lat":37.2801294,"lng":127.1146591},
-{"title":"여성안심 무인택배 보관함(포곡도서관)","lat":37.2788782,"lng":127.2325101},
-{"title":"여성안심무인택배보관함","lat":37.5960897,"lng":127.1351270},
-{"title":"정자1동 주민센터","lat":37.3021215,"lng":126.9910614},
-{"title":"연무동 행정복지센터","lat":37.2904253,"lng":127.0214219},
-{"title":"권선1동 주민센터","lat":37.2576004,"lng":127.0245589},
-{"title":"서호 노인복지관","lat":37.2786203,"lng":126.9759783},
-{"title":"행복 안심 \n무인택배함","lat":37.4471071,"lng":127.1386275},
-{"title":"행복 안심 \n무인택배함","lat":37.4434730,"lng":127.1487912},
-{"title":"행복 안심 \n무인택배함","lat":37.4453835,"lng":127.1330193},
-{"title":"행복 안심 \n무인택배함","lat":37.4570189,"lng":127.1665169},
-{"title":"행복 안심 \n무인택배함","lat":37.4657976,"lng":127.1270750}
+    {
+content: '<div>행복 안심 무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.439604,127.1654281)
+},
+{
+content: '<div>행복 안심 무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.428222,127.1463438)
+},
+{
+content: '<div>버드내 도서관</div>',
+latlng: new kakao.maps.LatLng(37.2567638,127.0149433)
+},
+{
+content: '<div>여성안심 무인택배 보관함(수지도서관)</div>',
+latlng: new kakao.maps.LatLng(37.319792,127.0941287)
+},
+{
+content: '<div>병점역안심무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.2070505387,127.0330044357)
+},
+{
+content: '<div>화산동안심무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.2059365037,127.0145635541)
+},
+{
+content: '<div>봉담읍안심무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.2199093515,126.9499615682)
+},
+{
+content: '<div>향남읍안심무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.1321128653,126.920380206)
+},
+{
+content: '<div>무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.433075,126.993391)
+},
+{
+content: '<div>여성안심 무인택배 보관함(죽전2동)</div>',
+latlng: new kakao.maps.LatLng(37.3259005,127.1055992)
+},
+{
+content: '<div>행복 안심 무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.4521301,127.1500173)
+},
+{
+content: '<div>지동 행정복지센터</div>',
+latlng: new kakao.maps.LatLng(37.2818733,127.0284786)
+},
+{
+content: '<div>파장동 행정복지센터</div>',
+latlng: new kakao.maps.LatLng(37.3101771,126.9973658)
+},
+{
+content: '<div>진안동안심무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.2132762058,127.0349221071)
+},
+{
+content: '<div>동탄4동안심무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.1997235077,127.1122427158)
+},
+{
+content: '<div>광명국민체육센터 택배함</div>',
+latlng: new kakao.maps.LatLng(37.4868017616,126.8656773005)
+},
+{
+content: '<div>광명여성비전센터 택배함</div>',
+latlng: new kakao.maps.LatLng(37.4347890253,126.8801441546)
+},
+{
+content: '<div>광명안현경로당 택배함</div>',
+latlng: new kakao.maps.LatLng(37.460103815,126.8724724337)
+},
+{
+content: '<div>광명종합사회복지관 택배함</div>',
+latlng: new kakao.maps.LatLng(37.4809053962,126.8504693907)
+},
+{
+content: '<div>광명전통시장공영주차장 택배함</div>',
+latlng: new kakao.maps.LatLng(37.482342335,126.8561009588)
+},
+{
+content: '<div>여성안심택배보관함(가능1동 주민센터 후문주차장)</div>',
+latlng: new kakao.maps.LatLng(37.7504849,127.0384882)
+},
+{
+content: '<div>여성안심택배보관함(경전철 동오역사내)</div>',
+latlng: new kakao.maps.LatLng(37.7450094,127.0563441)
+},
+{
+content: '<div>여성안심택배보관함(경전철 송산역사내)</div>',
+latlng: new kakao.maps.LatLng(37.7347378,127.0881237)
+},
+{
+content: '<div>고양여성안심무인택배</div>',
+latlng: new kakao.maps.LatLng(37.6370527,126.8322364)
+},
+{
+content: '<div>고양여성안심무인택배</div>',
+latlng: new kakao.maps.LatLng(37.6508813,126.8737239)
+},
+{
+content: '<div>고양여성안심무인택배</div>',
+latlng: new kakao.maps.LatLng(37.6704886,126.7606839)
+},
+{
+content: '<div>여성안심 무인택배 보관함(명지대역)</div>',
+latlng: new kakao.maps.LatLng(37.2379917,127.1903507)
+},
+{
+content: '<div>여성안심 무인택배 보관함(청덕도서관)</div>',
+latlng: new kakao.maps.LatLng(37.2927081,127.1475184)
+},
+{
+content: '<div>여성안심 무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.3901398,126.950418)
+},
+{
+content: '<div>여성안심무인택배보관함</div>',
+latlng: new kakao.maps.LatLng(37.6008656,127.1423149)
+},
+{
+content: '<div>조원1동 행정복지센터</div>',
+latlng: new kakao.maps.LatLng(37.3017609,127.0164732)
+},
+{
+content: '<div>평동 주민센터</div>',
+latlng: new kakao.maps.LatLng(37.2580705,126.9941119)
+},
+{
+content: '<div>곡선동 주민센터</div>',
+latlng: new kakao.maps.LatLng(37.2430198,127.0331652)
+},
+{
+content: '<div>팔달구민생활체육센터</div>',
+latlng: new kakao.maps.LatLng(37.2689008,127.0131752)
+},
+{
+content: '<div>화서1동 주민센터</div>',
+latlng: new kakao.maps.LatLng(37.2764876,126.994899)
+},
+{
+content: '<div>매탄2동 행정복지센터</div>',
+latlng: new kakao.maps.LatLng(37.2701813,127.0474156)
+},
+{
+content: '<div>여성안심 무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.2939227,126.872239)
+},
+{
+content: '<div>여성안심 무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.3405013,126.8272108)
+},
+{
+content: '<div>여성안심 무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.338417,126.8026945)
+},
+{
+content: '<div>의왕안심택배보관함</div>',
+latlng: new kakao.maps.LatLng(37.3204274,126.9485599)
+},
+{
+content: '<div>의왕안심택배보관함</div>',
+latlng: new kakao.maps.LatLng(37.353476,126.9715047)
+},
+{
+content: '<div>의왕안심택배보관함</div>',
+latlng: new kakao.maps.LatLng(37.3874735,126.9815854)
+},
+{
+content: '<div>의왕안심택배보관함</div>',
+latlng: new kakao.maps.LatLng(37.3912234,126.9949998)
+},
+{
+content: '<div>의왕안심택배보관함</div>',
+latlng: new kakao.maps.LatLng(37.3457286,126.9768911)
+},
+{
+content: '<div>행복 안심 무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.4548281,127.1609064)
+},
+{
+content: '<div>행복 안심 무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.4461653,127.1639845)
+},
+{
+content: '<div>행복 안심 무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.4405796,127.1261294)
+},
+{
+content: '<div>행복 안심 무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.4331364,127.1643182)
+},
+{
+content: '<div>행복 안심 무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.4384661,127.1389848)
+},
+{
+content: '<div>행복 안심 무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.4561358,127.1599032)
+},
+{
+content: '<div>행복 안심 무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.4371621,127.1287113)
+},
+{
+content: '<div>율천동 행정복지센터</div>',
+latlng: new kakao.maps.LatLng(37.2974596,126.9713137)
+},
+{
+content: '<div>여성안심택배보관함(경전철 회룡역사내)</div>',
+latlng: new kakao.maps.LatLng(37.7159306,127.04632)
+},
+{
+content: '<div>고양여성안심무인택배</div>',
+latlng: new kakao.maps.LatLng(37.6431641,126.789654)
+},
+{
+content: '<div>고양여성안심무인택배</div>',
+latlng: new kakao.maps.LatLng(37.6530474,126.8954435)
+},
+{
+content: '<div>고양여성안심무인택배</div>',
+latlng: new kakao.maps.LatLng(37.6588831,126.7736864)
+},
+{
+content: '<div>고양여성안심무인택배</div>',
+latlng: new kakao.maps.LatLng(37.6423587,126.7926815)
+},
+{
+content: '<div>여성안심 무인택배 보관함(기흥구청)</div>',
+latlng: new kakao.maps.LatLng(37.2801294,127.1146591)
+},
+{
+content: '<div>여성안심 무인택배 보관함(포곡도서관)</div>',
+latlng: new kakao.maps.LatLng(37.2788782,127.2325101)
+},
+{
+content: '<div>여성안심무인택배보관함</div>',
+latlng: new kakao.maps.LatLng(37.5960897,127.135127)
+},
+{
+content: '<div>정자1동 주민센터</div>',
+latlng: new kakao.maps.LatLng(37.3021215,126.9910614)
+},
+{
+content: '<div>연무동 행정복지센터</div>',
+latlng: new kakao.maps.LatLng(37.2904253,127.0214219)
+},
+{
+content: '<div>권선1동 주민센터</div>',
+latlng: new kakao.maps.LatLng(37.2576004,127.0245589)
+},
+{
+content: '<div>서호 노인복지관</div>',
+latlng: new kakao.maps.LatLng(37.2786203,126.9759783)
+},
+{
+content: '<div>행복 안심 무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.4471071,127.1386275)
+},
+{
+content: '<div>행복 안심 무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.443473,127.1487912)
+},
+{
+content: '<div>행복 안심 무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.4453835,127.1330193)
+},
+{
+content: '<div>행복 안심 무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.4570189,127.1665169)
+},
+{
+content: '<div>행복 안심 무인택배함</div>',
+latlng: new kakao.maps.LatLng(37.4657976,127.127075)
+}
 ];
 
 for (var i = 0; i < positions.length; i ++) {
